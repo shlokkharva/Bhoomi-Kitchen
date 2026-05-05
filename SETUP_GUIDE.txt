@@ -1,0 +1,57 @@
+========================================================================
+BHOOMI'S KITCHEN - PROJECT SETUP & USAGE GUIDE
+========================================================================
+
+1. PREREQUISITES
+---------------------------------------------------------
+- XAMPP installed (PHP 7.4+ or 8.x).
+- MySQL/MariaDB server running.
+
+2. DATABASE SETUP
+---------------------------------------------------------
+A. Open PHPMyAdmin (http://localhost/phpmyadmin).
+B. Create a new database named: restaurant_db
+C. Import the following files in order:
+   1. database.sql (Found in project root) - Sets up tables and Admin.
+   2. sample_data.sql (Found in project root) - Adds Menu Items.
+
+*Note: If you get a "Connection Refused" error, ensure your MySQL is on Port 3307. 
+This is already configured in `app/config/config.php`.*
+
+3. RUNNING THE PROJECT
+---------------------------------------------------------
+A. Place the project folder in `C:\xampp\htdocs\restaurant2`.
+B. Open your browser and go to: http://localhost/restaurant2
+
+4. LOGIN CREDENTIALS & ROLES
+---------------------------------------------------------
+
+👤 ADMIN PORTAL
+- URL: http://localhost/restaurant2/admins/login
+- Username: admin
+- Password: admin123
+- Functionalities: Manage Menu (Add/Edit/Delete), Manage Waiters (Approve/Reject), 
+  View All Orders, Manage Tables, and view Analytics.
+
+🧑‍🍳 WAITER PORTAL
+- URL: http://localhost/restaurant2/waiters/login
+- Registration: Register at http://localhost/restaurant2/waiters/register (Requires Admin approval).
+- Functionalities: View assigned orders, Accept/Serve orders, and Manage table status.
+
+🛒 CUSTOMER (USER)
+- URL: http://localhost/restaurant2 (Landing Page -> Explore Menu)
+- Registration: Use the "Login / Sign up" button on the Menu page.
+- Functionalities: Browse Menu, Add items to Cart, Place Order (Auto-allocates Table & Waiter), 
+  Track Order status in real-time, and View Order History.
+
+5. CORE FUNCTIONALITIES OVERVIEW
+---------------------------------------------------------
+- Premium Aesthetic: Glassmorphism design with 3D floating elements.
+- Real-time Tracking: Customers can see their order status change from 'Accepted' to 'Serving'.
+- Smart Allocation: Automatically assigns the best-fit available table and a free waiter.
+- Fully Responsive: Optimized for both Desktop and Mobile devices.
+- Theme: Modern Dark Mode (Optimized for low-light environments).
+
+========================================================================
+Happy Coding! 🍽️
+========================================================================
